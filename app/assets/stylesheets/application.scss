@@ -1,2 +1,41 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@keyframes shake {
+  0%, 100% {transform: rotate(-4deg) translateY(-2px);}
+  50% {transform: rotate(4deg) translateY(2px);}
+}
+
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+@keyframes reverse_spin {
+  0% {transform: rotate(360deg);}
+  100% {transform: rotate(0deg);}
+}
+
+#charlie {
+  animation: shake 0.09s infinite linear;
+}
+
+.charlie_container {
+  animation: spin 7s 0.5s infinite linear;
+}
+
+.charlie_container_reverse {
+  animation: reverse_spin 10s 1s infinite linear;
+}
+
+#top_row {
+  margin-top: 90px;
+}
+
+#bot_row {
+  margin-top: 100px;
+}
+
+body {
+  background-color: #222;
+}
